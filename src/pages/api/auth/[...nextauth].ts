@@ -1,8 +1,8 @@
-import NextAuth from 'next-auth';
-import GoogleProvider from 'next-auth/providers/google';
+import NextAuth from "next-auth";
+import GoogleProvider from "next-auth/providers/google";
 
-import { PrismaAdapter } from '@next-auth/prisma-adapter';
-import { prismaClient } from '../../../services/prismaClient';
+import { PrismaAdapter } from "@next-auth/prisma-adapter";
+import { prismaClient } from "../../../services/prismaClient";
 
 export default NextAuth({
   callbacks: {
@@ -13,8 +13,9 @@ export default NextAuth({
   adapter: PrismaAdapter(prismaClient),
   providers: [
     GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID || '',
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET || '',
+      clientId: process.env.GOOGLE_CLIENT_ID || "",
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET || "",
     }),
   ],
+  secret: process.env.SECRET,
 });
