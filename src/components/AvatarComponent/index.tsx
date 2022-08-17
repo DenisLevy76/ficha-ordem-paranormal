@@ -14,15 +14,13 @@ export const AvatarComponent: React.FC<Props> = ({
 }) => {
   const { data } = useSession();
 
-  const imageSrc = data?.user?.image;
+  const imageURL = data ? (data.user?.image as string) : undefined;
 
   return (
     <Fragment>
       <AvatarPrimitive.Root className="relative inline-flex h-10 w-10">
         <AvatarPrimitive.Image
-          src={
-            "https://lh3.googleusercontent.com/a-/AFdZucpRsx-YH8ZmeItce8WS2bAmQYzM2abzJW3z0begOw=s96-c"
-          }
+          src={imageURL}
           alt="Avatar"
           className={cx(
             "h-full w-full object-cover",
