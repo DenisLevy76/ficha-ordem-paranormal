@@ -19,7 +19,7 @@ export const InputComponent: React.FC<InputComponentProps> = ({
       <input
         id={id}
         {...otherProps}
-        className="bg-grey-900 text-base py-3 px-5"
+        className="bg-grey-900 text-base py-3 px-5 rounded"
       />
     </div>
   );
