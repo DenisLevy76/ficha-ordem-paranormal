@@ -4,19 +4,21 @@ import { InputComponent } from "../InputComponent";
 export interface SkillsComponentProps {
   id: string;
   name: ReactNode;
-  initialValue: string;
+  mainAttribute: string;
+  initialValue?: string;
 }
 
 export const SkillsComponent: React.FC<SkillsComponentProps> = ({
   id,
   name,
-  initialValue,
+  mainAttribute,
+  initialValue = "0",
 }) => {
-  const [value, setValue] = useState(initialValue);
+  const [value, setValue] = useState<string>(initialValue);
   return (
-    <div className="flex items-center bg-grey-900 pl-5 min-w-[250px] justify-between">
+    <div className="flex items-center bg-grey-900 pl-5 min-w-[250px] justify-between rounded">
       <label htmlFor={id} className="cursor-pointer">
-        {name}
+        {name} ({mainAttribute})
       </label>
       <InputComponent
         type="text"

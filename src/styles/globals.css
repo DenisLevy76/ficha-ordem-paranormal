@@ -20,3 +20,22 @@ body {
 ::-ms-input-placeholder {
   @apply text-grey-300;
 }
+
+/* width */
+::-webkit-scrollbar {
+  @apply w-2 bg-grey-900;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-grey-600 rounded;
+  border: 2px solid #09090a;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-grey-500;
+}

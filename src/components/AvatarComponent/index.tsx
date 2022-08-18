@@ -1,6 +1,7 @@
 import * as AvatarPrimitive from "@radix-ui/react-avatar";
 import cx from "classnames";
 import { useSession } from "next-auth/react";
+import { User } from "phosphor-react";
 import React, { Fragment } from "react";
 
 type Props = {
@@ -54,7 +55,7 @@ export const AvatarComponent: React.FC<Props> = ({
           delayMs={600}
         >
           <span className="text-sm font-medium uppercase text-gray-700 dark:text-gray-400">
-            {data?.user?.name ? data.user.name[0] : "X"}
+            {<User size={16} weight="thin" />}
           </span>
         </AvatarPrimitive.Fallback>
       </AvatarPrimitive.Root>

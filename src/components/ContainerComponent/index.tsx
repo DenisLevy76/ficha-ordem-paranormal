@@ -13,7 +13,7 @@ export const ContainerComponent: React.FC<ContainerComponentProps> = ({
   return (
     <section
       className={classNames(
-        "flex flex-1 lg:max-h-[450px] rounded bg-grey-700 w-full overflow-hidden",
+        "flex flex-1 xl:max-h-[450px] rounded bg-grey-700 w-full overflow-hidden",
         className
       )}
     >

@@ -3,7 +3,7 @@ import { IMAGES } from "../../settings/images";
 
 export const AttributesComponent: React.FC = () => {
   return (
-    <div className="flex justify-center bg-green-700 w-full lg:w-[27rem] lg:h-full">
+    <div className="flex justify-center bg-green-700 w-full xl:w-[27rem] xl:h-full">
       <div className="relative p-4">
         <Image
           src={IMAGES.attributesBg}
