@@ -21,7 +21,7 @@ export const SectionComponent: React.FC<SectionComponentProps> = ({
           <h2 className="text-xl font-bold">{title}</h2>
           {ICONS[icon]}
         </div>
-        <div>{children}a</div>
+        <div className="w-full">{children}</div>
       </div>
     </ContainerComponent>
   );

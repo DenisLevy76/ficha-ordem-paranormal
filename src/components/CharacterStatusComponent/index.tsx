@@ -51,15 +51,7 @@ export const CharacterStatusComponent: React.FC<
           </p>
         </span>
         <ButtonComponent
-          disabled={
-            maxValue !== undefined ? currentValueState >= maxValue : false
-          }
-          onClick={() =>
-            maxValue !== undefined
-              ? currentValueState < maxValue &&
-                setCurrentValueState(currentValueState + 1)
-              : setCurrentValueState(currentValueState + 1)
-          }
+          onClick={() => setCurrentValueState(currentValueState + 1)}
         >
           +
         </ButtonComponent>

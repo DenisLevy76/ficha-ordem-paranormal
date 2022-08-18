@@ -1,5 +1,6 @@
 import { useSession, signIn, signOut } from "next-auth/react";
 import { AvatarComponent } from "../AvatarComponent";
+import { ButtonComponent } from "../ButtonComponent";
 
 export const HeaderComponent: React.FC = () => {
   const { data } = useSession();
@@ -9,9 +10,11 @@ export const HeaderComponent: React.FC = () => {
       <h1 className="text-xl font-bold">TabletOP RPG</h1>
       <div className="flex items-center gap-2">
         {data ? (
-          <button onClick={() => signOut()}>Logout</button>
+          <ButtonComponent onClick={() => signOut()}>Logout</ButtonComponent>
         ) : (
-          <button onClick={() => signIn("google")}>Login</button>
+          <ButtonComponent onClick={() => signIn("google")}>
+            Login
+          </ButtonComponent>
         )}
         <AvatarComponent variant="Circle" />
       </div>
