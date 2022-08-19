@@ -7,21 +7,19 @@ import React, { Fragment } from "react";
 type Props = {
   variant: "Circle" | "Rounded";
   isOnline?: boolean;
+  avatarURL?: string;
 };
 
 export const AvatarComponent: React.FC<Props> = ({
   variant,
+  avatarURL,
   isOnline = false,
 }) => {
-  const { data } = useSession();
-
-  const imageURL = data ? (data.user?.image as string) : undefined;
-
   return (
     <Fragment>
       <AvatarPrimitive.Root className="relative inline-flex h-10 w-10">
         <AvatarPrimitive.Image
-          src={imageURL}
+          src={avatarURL}
           alt="Avatar"
           className={cx(
             "h-full w-full object-cover",
