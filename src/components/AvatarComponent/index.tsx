@@ -1,16 +1,10 @@
 import * as AvatarPrimitive from "@radix-ui/react-avatar";
 import cx from "classnames";
-import { useSession } from "next-auth/react";
 import { User } from "phosphor-react";
 import React, { Fragment } from "react";
+import { AvatarComponentProps } from "./types";
 
-type Props = {
-  variant: "Circle" | "Rounded";
-  isOnline?: boolean;
-  avatarURL?: string;
-};
-
-export const AvatarComponent: React.FC<Props> = ({
+export const AvatarComponent: React.FC<AvatarComponentProps> = ({
   variant,
   avatarURL,
   isOnline = false,

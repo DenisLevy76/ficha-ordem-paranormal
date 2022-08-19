@@ -2,13 +2,7 @@ import classNames from "classnames";
 import { Brain, Heart, Lightning } from "phosphor-react";
 import { useState } from "react";
 import { ButtonComponent } from "../ButtonComponent";
-
-export interface ICharacterStatusComponentProps {
-  maxValue?: number;
-  currentValue: number;
-  status: "life" | "sanity" | "effort";
-  label: string;
-}
+import { ICharacterStatusComponentProps } from "./types";
 
 export const CharacterStatusComponent: React.FC<
   ICharacterStatusComponentProps

@@ -1,10 +1,6 @@
 import classNames from "classnames";
 import { ButtonHTMLAttributes } from "react";
-
-export interface ButtonComponentProps
-  extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "outlined" | "text" | "contained";
-}
+import { ButtonComponentProps } from "./types";
 
 export const ButtonComponent: React.FC<ButtonComponentProps> = ({
   variant = "contained",

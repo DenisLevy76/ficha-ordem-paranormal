@@ -2,12 +2,7 @@ import { File } from "phosphor-react";
 import { ReactNode } from "react";
 import { ICONS } from "../../settings/icons";
 import { ContainerComponent } from "../ContainerComponent";
-
-export interface SectionComponentProps {
-  title: string;
-  children?: ReactNode;
-  icon: "description" | "skills" | "inventory";
-}
+import { SectionComponentProps } from "./types";
 
 export const SectionComponent: React.FC<SectionComponentProps> = ({
   children,

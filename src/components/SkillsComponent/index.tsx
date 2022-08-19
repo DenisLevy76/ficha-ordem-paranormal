@@ -1,12 +1,6 @@
-import { ReactNode, useState } from "react";
+import { useState } from "react";
 import { InputComponent } from "../InputComponent";
-
-export interface SkillsComponentProps {
-  id: string;
-  name: ReactNode;
-  mainAttribute: string;
-  initialValue?: string;
-}
+import { SkillsComponentProps } from "./types";
 
 export const SkillsComponent: React.FC<SkillsComponentProps> = ({
   id,

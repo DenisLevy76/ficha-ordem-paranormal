@@ -1,19 +1,17 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { useRouter } from "next/router";
 import { ChangeEvent, startTransition, useState } from "react";
 
 import { AttributesContainerComponent } from "../../../components/AttributesContainerComponent";
+import { CharacterNavBarComponent } from "../../../components/CharacterNavBarComponent";
 import { InputComponent } from "../../../components/InputComponent";
+
 import { SectionComponent } from "../../../components/SectionComponent";
 import { SkillsComponent } from "../../../components/SkillsComponent";
 
 const Home: NextPage = () => {
   const [skillFilterValue, setSkillFilterValue] = useState<string>("");
   const [skillFilter, setSkillFilter] = useState<string>("");
-
-  const { query } = useRouter();
-  const { character } = query;
 
   const skills: {
     id: string;
@@ -53,7 +51,8 @@ const Home: NextPage = () => {
       <Head>
         <title>Tabletop RPG - Ordem paranormal</title>
       </Head>
-      <main className="flex flex-col p-2 xl:px-16 xl:py-8 gap-16">
+      <main className="flex flex-col px-2 py-4 xl:px-16 xl:py-8 gap-16">
+        <CharacterNavBarComponent />
         <AttributesContainerComponent />
         <SectionComponent icon="skills" title="Perícias">
           <header className="flex justify-center p-3 border-b border-grey-600">
